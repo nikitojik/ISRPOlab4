@@ -24,7 +24,6 @@ class RectangleTestCase(unittest.TestCase):
         res = area(10, 10)
         self.assertEqual(res, 100)
 
-    # Тесты для функции perimeter (периметр)
     def test_perimeter_positive(self):
         res = perimeter(5, 3)
         self.assertEqual(res, 16)
@@ -45,7 +44,6 @@ class RectangleTestCase(unittest.TestCase):
         res = perimeter(10, 10)
         self.assertEqual(res, 40)
 
-    # Негативные тесты
     def test_area_negative_input(self):
         with self.assertRaises(TypeError):
             area(-5, 3)
