@@ -1,4 +1,4 @@
-name: Run Unit Tests after push actions  
+name: Run Unit Tests after push
 
 on: [push]
 
@@ -22,6 +22,13 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install pytest  # ← ДОБАВЬТЕ ЭТО
+        
+    - name: List directory structure (для отладки)
+      run: |
+        ls -la
+        echo "=== Test directory ==="
+        ls -la test_directory/ || echo "No test_directory found"
         
     - name: Run unit tests
       run: |
