@@ -3,7 +3,6 @@ from rectangle import area, perimeter
 
 
 class RectangleTestCase(unittest.TestCase):
-    # Тесты для функции area (площадь)
     def test_area_zero_width(self):
         res = area(10, 0)
         self.assertEqual(res, 0)
